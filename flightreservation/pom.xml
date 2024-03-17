@@ -15,7 +15,7 @@
   <properties>
         <selenium.java.version>4.16.0</selenium.java.version>
         <logback.version>1.4.14</logback.version>
-        <webdriver.manager.version>5.6.3</webdriver.manager.version>
+        <webdriver.manager.version>5.7.0</webdriver.manager.version>
         <testng.version>7.9.0</testng.version>
         <jackson.version>2.16.1</jackson.version>
         <!-- plugins versions -->
@@ -28,6 +28,13 @@
         <package.directory>${project.build.directory}/docker-resources</package.directory>
     </properties>
     <dependencies>
+      
+        <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>4.11</version>
+          <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -82,9 +89,10 @@
                 <configuration>
                     <systemPropertyVariables>
                         <browser>chrome</browser>
+                        <selenium.grid.enabled>false</selenium.grid.enabled>
                     </systemPropertyVariables>
                     <suiteXmlFiles>
-                        <file>test-suite.xml</file>
+                        <file>src/test/resources/test-suites/flight-reservation.xml</file>
                     </suiteXmlFiles>
                     <threadCount>1</threadCount>
                     <reportsDirectory>target/test-output</reportsDirectory>
