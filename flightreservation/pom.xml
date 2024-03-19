@@ -94,6 +94,7 @@
                     <suiteXmlFiles>
                         <file>src/test/resources/test-suites/flight-reservation.xml</file>
                     </suiteXmlFiles>
+                    <parallel>tests</parallel>
                     <threadCount>1</threadCount>
                     <reportsDirectory>target/test-output</reportsDirectory>
                 </configuration>

@@ -18,7 +18,6 @@ import org.testng.annotations.Listeners;
 import com.flightreservation.listener.TestListener;
 import com.flightreservation.utils.Config;
 import com.flightreservation.utils.Constants;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 @Listeners({TestListener.class})
@@ -27,6 +26,7 @@ public abstract class AbstractTest {
     private static final Logger log = LoggerFactory.getLogger(AbstractTest.class);
     protected WebDriver driver;
 
+    // below method will execute before execution starts
     @BeforeSuite
     public void setUpConfig() {
         Config.initialize();
