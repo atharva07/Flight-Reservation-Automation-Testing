@@ -22,6 +22,11 @@ public class FlightReservationTest extends AbstractTest{
     // hit the command mvn clean test
     // check the reports in the target folder of the project.
     // dont forget to push the code.
+
+    // For executing from target folder, where we created packages 
+    // navigate to docker-resources folder
+    // hit the command: java -cp "libs/*" org.testng.TestNG -threadcount 1 test-suites/flightreservation.xml
+    
     @BeforeTest
     @Parameters("testDataPath")
     public void setParameters(String testDataPath) {
