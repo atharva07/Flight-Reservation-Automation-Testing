@@ -3,7 +3,7 @@
     <test name="passengers-count-1">
         <!-- <parameter name="noOfPassengers" value="1" /> -->
         <!-- <parameter name="expectedPrice" value="$584 USD" /> -->
-        <parameter name="testDataPath" value="D:\FlightReservationProject\flightreservation\src\test\resources\test-data\passenger-1.json" />
+        <parameter name="testDataPath" value="test-data/passenger-1.json" />
         <!-- <parameter name="browser" value="chrome" /> -->
         <classes>
             <class name="com.flightreservation.FlightReservationTest" />
@@ -11,7 +11,7 @@
     </test>
 
     <test name="passengers-count-2">
-        <parameter name="testDataPath" value="D:\FlightReservationProject\flightreservation\src\test\resources\test-data\passenger-2.json" />
+        <parameter name="testDataPath" value="test-data/passenger-2.json" />
         <!-- <parameter name="browser" value="chrome" /> -->
         <classes>
             <class name="com.flightreservation.FlightReservationTest" />
@@ -19,7 +19,7 @@
     </test>
 
     <test name="passengers-count-3">
-        <parameter name="testDataPath" value="D:\FlightReservationProject\flightreservation\src\test\resources\test-data\passenger-3.json" />
+        <parameter name="testDataPath" value="test-data/passenger-3.json" />
         <!-- <parameter name="browser" value="chrome" /> -->
         <classes>
             <class name="com.flightreservation.FlightReservationTest" />
@@ -27,7 +27,7 @@
     </test>
 
     <test name="passengers-count-4">
-        <parameter name="testDataPath" value="D:\FlightReservationProject\flightreservation\src\test\resources\test-data\passenger-4.json" />
+        <parameter name="testDataPath" value="test-data/passenger-4.json" />
         <!-- <parameter name="browser" value="chrome" /> -->
         <classes>
             <class name="com.flightreservation.FlightReservationTest" />
