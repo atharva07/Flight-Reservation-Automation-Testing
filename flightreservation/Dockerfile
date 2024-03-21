@@ -25,4 +25,4 @@ ADD target/docker-resources ./
 # We created a "runner" script which checks the grid "readiness". Then run the tests!
 
 # Run the command to initiate the tests
-#ENTRYPOINT sh runner.sh
+ENTRYPOINT java -cp "libs/*" -Dselenium.grid.enabled=true -Dselenium.grid.hubHost=${HUB_HOST} -Dbrowser=${BROWSER} org.testng.TestNG -threadcount ${THREAD_COUNT} test-suites/${TEST_SUITE}
