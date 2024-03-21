@@ -1,14 +1,14 @@
 FROM bellsoft/liberica-openjdk-alpine:17-cds-x86_64
 
 # install curl and jq
-#RUN apk add curl jq
+RUN apk add curl jq
 
 # workspace
 WORKDIR /home/flightreservation
 
 # we can add the required file to run the test
 ADD target/docker-resources ./
-#ADD runner.sh      runner.sh 
+ADD runner.sh      runner.sh
 
 # start the runner.sh
 # once the changes are made in the automation script
@@ -25,4 +25,7 @@ ADD target/docker-resources ./
 # We created a "runner" script which checks the grid "readiness". Then run the tests!
 
 # Run the command to initiate the tests
-ENTRYPOINT java -cp "libs/*" -Dselenium.grid.enabled=true -Dselenium.grid.hubHost=${HUB_HOST} -Dbrowser=${BROWSER} org.testng.TestNG -threadcount ${THREAD_COUNT} test-suites/${TEST_SUITE}
+#ENTRYPOINT java -cp "libs/*" -Dselenium.grid.enabled=true -Dselenium.grid.hubHost=${HUB_HOST} -Dbrowser=${BROWSER} org.testng.TestNG -threadcount ${THREAD_COUNT} test-suites/${TEST_SUITE}
+
+# start the runner.sh
+ENTRYPOINT sh runner.sh
