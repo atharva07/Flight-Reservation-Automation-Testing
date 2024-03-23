@@ -14,9 +14,8 @@ ADD runner.sh      runner.sh
 # once the changes are made in the automation script
 # 1. create a package by hitting the command - mvn clean package -DskipTests
 # 2. Then build  the image using the command - docker build -t=[username]/[imagename]
-# 3. Then hit the command to execute the test - docker run -e BROWSER=chrome -e HUB_HOST=192.168.0.104 -e TEST_SUITE=flight-reservation.xml -e THREAD_COUNT=2 atharvahiwase7/dockerselenium
-# 4. We can also create a container and directly execute the test cases. just save the yaml file and hit the command 
-# docker-compose up. 
+# 3. Once the container is build and ready. hit the command in the location where docker yaml file is stored. - docker-compose up
+# 4. check the results in the output file which we created using volume mapping method.
 
 # Test results are inside the container
 # We can get the test results to the machine by doing volume mapping
